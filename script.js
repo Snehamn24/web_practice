@@ -1,10 +1,7 @@
-<script>
-    function clickme() {
+document.addEventListener("DOMContentLoaded", function() {
+  const button = document.getElementById("btn1");
 
-        const button = document.getElementById("btn1")
-
-        //Add click 
-
-        
-    }
-</script>
+  button.addEventListener("click", function() {
+    alert("Welcome!");
+  });
+});
