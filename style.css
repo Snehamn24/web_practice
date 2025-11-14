@@ -1,0 +1,151 @@
+:root{
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+padding:28px;
+}
+
+
+.container{
+max-width:var(--max-width);
+margin:0 auto;
+padding:18px;
+}
+
+
+.card{
+background:var(--card);
+border-radius:var(--radius);
+padding:20px;
+box-shadow:var(--shadow);
+overflow:hidden;
+}
+
+
+.card-header{margin-bottom:8px}
+.card-header h1{margin:0;font-size:1.5rem}
+.subtitle{margin:6px 0 0;color:var(--muted);font-size:0.95rem}
+
+
+.feedback-form{display:block;margin-top:12px}
+.row{margin-top:14px}
+.row.horizontal{display:flex;gap:14px;align-items:flex-end}
+.row.small{margin-top:10px}
+
+
+label{display:block;font-weight:600;font-size:0.9rem;color:#0b1220;margin-bottom:6px}
+input[type="text"],input[type="email"],input[type="date"],select,textarea{
+width:100%;
+padding:10px 12px;
+border-radius:8px;
+border:1px solid #e6eef7;
+background:linear-gradient(180deg,#fff,#fbfdff);
+font-size:0.95rem;
+transition:box-shadow .15s ease, border-color .12s ease;
+}
+
+
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent);box-shadow:0 4px 18px rgba(43,110,213,0.12)}
+
+
+textarea{resize:vertical}
+
+
+.rating-group{display:flex;gap:8px;flex-wrap:wrap;align-items:center;border:none;padding:0;margin:0}
+.rating{display:flex;flex-direction:column;align-items:flex-start;font-weight:500;font-size:0.85rem}
+.rating input{margin-right:8px}
+
+
+.purchase-date{min-width:160px}
+.flex-2{flex:1}
+
+
+.checkbox{display:flex;gap:8px;align-items:center}
+.checkbox input{transform:scale(1.05)}
+
+
+.actions{display:flex;gap:10px;align-items:center;margin-top:18px}
+.btn{padding:10px 14px;border-radius:10px;border:none;font-weight:600;cursor:pointer}
+.btn.primary{background:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(43,110,213,0.18)}
+.btn.ghost{background:transparent;border:1px solid #dbe9ff;color:var(--accent)}
+
+
+.note{color:var(--muted);font-size:0.9rem;margin-top:12px}
+
+
+@media (max-width:700px){
+.row.horizontal{flex-direction:column}
+.purchase-date{width:100%}
+}
+
+
+/* small touch: high-contrast focus outline for keyboard users */
+:focus{outline:3px solid rgba(43,110,213,0.15);outline-offset:2px}
+
+
+/* end of styles.css */body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f4f7fc;
+}
+.wrapper{
+max-width:350px;
+background:white;
+padding:20px;
+margin:40px auto;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+h2{
+margin-top:0;
+text-align:center;
+}
+
+
+label{
+font-weight:bold;
+margin-top:10px;
+display:block;
+}
+
+
+input[type="text"], input[type="email"], select{
+width:100%;
+padding:8px;
+margin-top:5px;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:14px;
+}
+
+
+/* Star Rating */
+.star-rating{
+direction: rtl;
+display: flex;
+gap: 5px;
+font-size: 28px;
+cursor:pointer;
+}
+.star-rating input{
+display:none;
+}
+.star-rating label{
+color:#ccc;
+}
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label{
+color:gold;
+}
+
+
+/* Emoji Rating */
+.emoji-rating{
+display:flex;
+gap:15px;
+font-size:30px;
+cursor:pointer;
+margin:5px 0 10px;
+}

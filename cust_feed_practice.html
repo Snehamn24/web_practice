@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<head>
+    <title>Feedback form</title>
+
+    <style>
+
+        .container
+        {
+            width: 350px;
+            margin: 20px auto;
+            padding: 20px;
+            border: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            font-family: Arial;
+        }
+        .star-rating {
+    direction: rtl;              /* Reverse stars so hover works correctly */
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+}
+
+.star-rating input {
+    display: none;               /* Hide radio buttons */
+}
+
+.star-rating label {
+    font-size: 35px;
+    color: #ccc;                 /* Grey by default */
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+/* When a star is selected */
+.star-rating input:checked ~ label {
+    color: gold;
+}
+
+/* Hover effect */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: gold;
+}
+.emojis input
+
+{
+  display: none;
+}
+
+/* When emoji is selected */
+       
+
+        .emojis  label:hover{
+            background-color: blanchedalmond;
+        }
+
+
+        .emojis label {
+            font-size: 30px;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+        .emojis input:checked + label {
+    background-color: #ffe4b5;
+    border: 2px solid #d2a679;
+}
+    </style>
+</head>
+
+<body>
+    <form>
+    <div class="container">
+    <h2 style="text-align: center;">Feedback Form</h2>
+
+    <h3 style="text-align: center;">Rate the Product</h3>
+   <div class="star-rating">
+    <input type="radio" id="star5" name="rating" value="5">
+    <label for="star5">&#9733;</label>
+
+    <input type="radio" id="star4" name="rating" value="4">
+    <label for="star4">&#9733;</label>
+
+    <input type="radio" id="star3" name="rating" value="3">
+    <label for="star3">&#9733;</label>
+
+    <input type="radio" id="star2" name="rating" value="2">
+    <label for="star2">&#9733;</label>
+
+    <input type="radio" id="star1" name="rating" value="1">
+    <label for="star1">&#9733;</label>
+</div>
+
+    <h3 style="text-align: center;">Your Experience</h3>
+    <div class="emojis" style="display: flex; justify-content: center; gap: 10px;">
+    <input type="radio" id="e1" name="exp">
+    <label for="e1">😒</label>
+
+    <input type="radio" id="e2" name="exp">
+    <label for="e2">🙂</label>
+
+    <input type="radio" id="e3" name="exp">
+    <label for="e3">😊</label>
+
+    <input type="radio" id="e4" name="exp">
+    <label for="e4">😍</label>
+</div>
+
+
+    <h3 style="text-align: center;">Your Email</h3>
+    <div style="justify-content:center; display: flex;">
+        <input type="email" placeholder="your email">
+    </div>
+
+    <!-- BUTTONS CENTERED HERE -->
+    <div style="display: flex; justify-content: center; gap: 15px; margin-top: 20px;">
+        <button type="submit" style="background-color: burlywood; padding: 8px 20px;">Submit</button>
+        <button type="reset" style="background-color: burlywood; padding: 8px 20px;">Clear</button>
+    </div>
+
+</div>
+</form>
+
+</body>
+
+</html>
